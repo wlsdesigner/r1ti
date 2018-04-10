@@ -71,23 +71,19 @@
 
     <!-- Page Content -->
 	<div class="container">
-	  
-	  <div class="row">
+	  	  <div class="row">
 	  	    <div class="col">&nbsp;</div>
 	  	    <div class="w-100">&nbsp;</div>
 	  	    <div class="col">&nbsp;</div>
 	  	    <div class="col">&nbsp;</div>
 	  </div>
-	  <div class="row">
-	  	    <div class="col">&nbsp;</div>
+	 <div class="row">
 	  	    <div class="w-100">&nbsp;</div>
-	  	    <div class="col">&nbsp;</div>
-	  	    <div class="col"></div>
 	  </div>
 	  
 	 <div class="row">
 	    <div class="col-sm">
-	      <div align="center"><img src="vendor/bootstrap/css/logo.png" width="300"></div>
+	      <div align="center"><img src="vendor/bootstrap/css/logo.png" width="340"></div>
 
 	    </div>
 	    <div class="col-sm">
