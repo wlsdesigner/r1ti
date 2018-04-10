@@ -161,7 +161,7 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #007BBE;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
@@ -2503,14 +2503,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #007BBE;
+  border-color: #fff;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #000;
+  border-color: #fff;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -7379,7 +7379,7 @@ button.bg-dark:focus {
 }
 
 .w-100 {
-  width: 100% !important;
+  width: 100% !important;      
 }
 
 .h-25 {
