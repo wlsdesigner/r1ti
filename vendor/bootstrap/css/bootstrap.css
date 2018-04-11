@@ -168,7 +168,7 @@ a {
 }
 
 a:hover {
-  color: #0056b3;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -2504,13 +2504,13 @@ fieldset:disabled a.btn {
 .btn-primary {
   color: #fff;
   background-color: #007BBE;
-  border-color: #fff;
+  border-color: #;
 }
 
 .btn-primary:hover {
   color: #fff;
   background-color: #000;
-  border-color: #fff;
+  border-color: #;
 }
 
 .btn-primary:focus, .btn-primary.focus {
