@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-  	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icon/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/apple-touch-icon-114x114.png" />
@@ -25,12 +27,12 @@
 	<meta name="msapplication-wide310x150logo" content="images/icon/mstile-310x150.png" />
 	<meta name="msapplication-square310x310logo" content="images/icon/mstile-310x310.png" />
     <title>Desenvolvimento de Sistemas</title>
-    
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="vendor/bootstrap/css/full.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/full1.css" rel="stylesheet">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 	<style>
 	      body {
@@ -75,10 +77,10 @@
               <a class="nav-link" href="missao.html">Sobre Nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="servico.html">Serviços</a>
+              <a class="nav-link" href="">Serviços</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contato.html">Contato</a>
+              <a class="nav-link" href="contatos.html">Contato</a>
             </li>
           </ul>
         </div>
@@ -87,67 +89,56 @@
 
     <!-- Page Content -->
 	<div class="container">
-	  	  <div class="row">
-	  	    <div class="col">&nbsp;</div>
-	  	    <div class="w-100">&nbsp;</div>
-	  	    <div class="col">&nbsp;</div>
-	  	    <div class="col">&nbsp;</div>
-	  </div>
-	 
-
-	 <div class="row">
-	    <div class="col-sm">
-	      <div align="center"><img class="img-responsive" src="vendor/bootstrap/css/logo.png" width="340"></div>
-
-	    </div>
-	    <div class="col-sm">
-	   	   <form class="form-horizontal" action="http://formmail.kinghost.net/formmail.cgi" method="POST">
-			<input type="hidden" name="recipient" value="r1ti@r1ti.com.br"> <input type="hidden" name="redirect" value="http://www.r1ti.com.br/ok.html"> <input type="hidden" name="subject" value="teste de assunto"> <input type="hidden" name="email" value="wilson.batista@r1ti.com.br">
-			<fieldset>
-			<div class="form-group">
-			  <legend><font color="#fff"><h3>Fale Conosco</h3></font></legend>
-			  <br>
-			  <div class="col-md-12">
-			  <input id="textinput_nome" name="textinput_nome" placeholder="Digite o Nome Completo" class="form-control input-md" required="" type="text">
-			  <span class="help-block">Entre com seu nome</span>
-			  </div>
-			</div>
-
-			<!-- Text input-->
-			<div class="form-group">
-			  <div>
-					  <div class="col-md-12">
-					  <input id="textinput_email" name="textinput_email" placeholder="Digite um Email Válido" class="form-control input-md" required="" type="text">
-					  <span class="help-block">entre com seu email</span>
-					  </div>
-			  </div>
-			</div>
-			<!-- Textarea -->
-			<div class="form-group">
-			  <div class="col-md-12">
-			    <textarea class="form-control" id="textarea_mensagem" placeholder="Digite Sua Mensagem" name="textarea_mensagem"></textarea>
-			  </div>
-			</div>
-
-			<!-- Button -->
-			<div class="form-group">
-			  <div class="col-md-12">
-			    <button type="submit" name="BTEnvia" value="Enviar" class="btn btn-primary">Enviar</button>
-			    <button type="reset" name="BTApaga" value="Apagar" class="btn btn-primary">Apagar</button>
-			    
-			  </div>
-			</div>
-
-			</fieldset>
-		  </form>
-	    </div>
-	    <div class="col-sm">
-	      &nbsp;
-	    </div>
-	  </div>
-	  <br>
-	  <br><br>
 	  
+	<div class="row">
+	  		<div class="img-responsive" ><img class="img-responsive" src="vendor/bootstrap/css/logo.png"  width="340"></div>
+			 <div class="w-50">&nbsp;</div><!-- w-75 w-10 w-50 são os espaçamentos -->
+	  </div>
+	  
+	  <div class="row mb-2"> 
+        
+        <div class="col-md-12">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">Serviços</strong>
+              <p class="card-text mb-auto">Desenvolvemos sistemas customizados para a auxiliar os controles organizacionais dos clientes, visando sempre a satisfação do cliente final.
+			  </p>
+            </div>
+            <img src="images/servicos.png">       
+          </div>
+        </div>   
+      </div>   
+      <div class="row mb-2">
+	  <div class="col-md-12">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">Equipe</strong>
+              <p class="card-text mb-auto">Nossos profissionais de mais alto nível possuem um grande diferencial de mercado por dominarem os conhecimentos técnicos aliados às regras de negócio de nossos parceiros. Neste cenário, o mesmo profissional está habilitado a lidar com a análise da regra de negócio, da estrutura necessária para torná-la possível e do desenvolvimento, diminuindo assim as perdas de informações e agilizando o prazo de entrega.
+			  </p>
+              
+            </div>
+            <img src="images/equipe.png"> 
+          </div>
+        </div>     
+        </div>
+	  
+      <div class="row mb-2">  
+        <div class="col-md-12">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">Tecnologias</strong>
+              <p class="card-text mb-auto">Adotamos a linguagem de programação mais utilizada no mundo (Java) com sistemas voltados para Web / Mobile, desta forma disponibilizamos pela rede/internet o seu sistema para qualquer dispositivo, independente de sistema operacional utilizado, o único requisito é que ele possua um navegador instalado e acesso à internet (ou rede, caso for um sistema interno).
+				Temos como preferência atuar com softwares livres quanto aos sistemas operacionais de servidores, bancos de dados e servidores web (Linux, MySQL, Tomcat), porém respeitamos a decisão dos clientes e estamos preparados para atender quaisquer outros requisitos.
+				Nos preocupamos muito com a questão de segurança e integridade de informações e para tanto adotamos práticas reconhecidas pelo mercado como por exemplo a adoção de certificados de segurança criptográficos, redundância de backups, entre outros.
+
+			  </p>
+            </div>
+            <img src="images/tecnologia.png">      
+          </div>
+        </div>
+      </div>
+    </div>
+	<br><br>
       <div class="footer">
 	    <div style="font-size:20px;">
 	    	<a href="https://www.facebook.com/r1tisistemas"><i class="fab fa-facebook"></i></a>
