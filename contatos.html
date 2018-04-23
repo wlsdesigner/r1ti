@@ -30,8 +30,40 @@
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" /> 
     <link href="vendor/bootstrap/css/full.css" rel="stylesheet">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+	<script type="text/javascript">
+     	function slideSwitch() {
+		    var $active = $('#slideshow IMG.active');
+		
+		    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+		
+		    // use this to pull the images in the order they appear in the markup
+		    var $next =  $active.next().length ? $active.next()
+		        : $('#slideshow IMG:first');
+		
+		    // uncomment the 3 lines below to pull the images in random order
+		
+		    // var $sibs  = $active.siblings();
+		    // var rndNum = Math.floor(Math.random() * $sibs.length );
+		    // var $next  = $( $sibs[ rndNum ] );
+		
+		    $active.addClass('last-active');
+		
+		    $next.css({opacity: 0.0})
+		        .addClass('active')
+		        .animate({opacity: 1.0}, 1000, function() {
+		            $active.removeClass('active last-active');
+		        });
+		}
+		
+		$(function() {
+		    setInterval( "slideSwitch()", 5000 );
+		});
+	</script>
 	<style>
 	      body {
 	        padding-top: 54px;
@@ -75,10 +107,10 @@
               <a class="nav-link" href="missao.html">Sobre Nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="servico.html">Serviços</a>
+              <a class="nav-link" href="servicos.html">Serviços</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contato.html">Contato</a>
+              <a class="nav-link" href="contatos.html">Contato</a>
             </li>
           </ul>
         </div>
@@ -87,19 +119,25 @@
 
     <!-- Page Content -->
 	<div class="container">
-	  	  <div class="row">
-	  	    <div class="col">&nbsp;</div>
-	  	    <div class="w-100">&nbsp;</div>
-	  	    <div class="col">&nbsp;</div>
-	  	    <div class="col">&nbsp;</div>
-	  </div>
-	 
+  	  <div class="row">
+  	    <div class="col">&nbsp;</div>
+  	    <div class="w-100">&nbsp;</div>
+  	    <div class="col">&nbsp;</div>
+  	    <div class="col">&nbsp;</div>
+  	 </div>
 
 	 <div class="row">
 	    <div class="col-sm">
-	      <div align="center"><img class="img-responsive" src="vendor/bootstrap/css/logo.png" width="340"></div>
-
+	      <div><img src="vendor/bootstrap/css/logo.png" class="img-fluid" ></div>
+		  <div>
+		  	<legend><font color="#fff"><h6>Midias Sociais</h6></font></legend>   
+	      	<div align="center">
+	      	    <a href="https://www.facebook.com/r1tisistemas"><font size="6"><i class="fab fa-facebook"></i></font></a>
+			  	<a href="https://twitter.com/r1_ti"><font size="6"><i class="fab fa-twitter"></i></font></a>
+			</div>
+	      </div>
 	    </div>
+	   
 	    <div class="col-sm">
 	   	   <form class="form-horizontal" action="http://formmail.kinghost.net/formmail.cgi" method="POST">
 			<input type="hidden" name="recipient" value="r1ti@r1ti.com.br"> <input type="hidden" name="redirect" value="http://www.r1ti.com.br/ok.html"> <input type="hidden" name="subject" value="teste de assunto"> <input type="hidden" name="email" value="wilson.batista@r1ti.com.br">
@@ -109,7 +147,7 @@
 			  <br>
 			  <div class="col-md-12">
 			  <input id="textinput_nome" name="textinput_nome" placeholder="Digite o Nome Completo" class="form-control input-md" required="" type="text">
-			  <span class="help-block">Entre com seu nome</span>
+			  <span class="help-block">&nbsp;</span>
 			  </div>
 			</div>
 
@@ -118,7 +156,7 @@
 			  <div>
 					  <div class="col-md-12">
 					  <input id="textinput_email" name="textinput_email" placeholder="Digite um Email Válido" class="form-control input-md" required="" type="text">
-					  <span class="help-block">entre com seu email</span>
+					  <span class="help-block">&nbsp;</span>
 					  </div>
 			  </div>
 			</div>
@@ -147,7 +185,13 @@
 	  </div>
 	  <br>
 	  <br><br>
-	  
+	  <div id="slideshow">   
+	    <img src="images/backfundo.jpg" alt="Slideshow Image 1" class="active" />
+	    <img src="images/backfundo1.jpg" alt="Slideshow Image 2" />   
+	    <img src="images/backfundo2.jpg" alt="Slideshow Image 3" />
+	    <img src="images/backfundo3.jpg" alt="Slideshow Image 4" />
+	    <img src="images/backfundo.jpg" alt="Slideshow Image 5" />
+	  </div> 
       <div class="footer">
 	    <div style="font-size:20px;">
 	    	<a href="https://www.facebook.com/r1tisistemas"><i class="fab fa-facebook"></i></a>
@@ -160,7 +204,38 @@
 	<!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
 
+			//  Creating our button in JS for smaller screens
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> <font color="#fff">Menu</font></button>');
+
+			//  Toggle the class on click to show / hide the menu
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+
+			// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+			document.onclick = function(e) {
+				var mobileButton = document.getElementById('menutoggle'),
+					buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+				if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+					changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+				}
+			}
+		</script>
 
   </body>
 

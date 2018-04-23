@@ -32,8 +32,40 @@
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="vendor/bootstrap/css/full1.css" rel="stylesheet">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />              
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<script src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+	<script type="text/javascript">
+     	function slideSwitch() {
+		    var $active = $('#slideshow IMG.active');
+		
+		    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+		
+		    // use this to pull the images in the order they appear in the markup
+		    var $next =  $active.next().length ? $active.next()
+		        : $('#slideshow IMG:first');
+		
+		    // uncomment the 3 lines below to pull the images in random order
+		
+		    // var $sibs  = $active.siblings();
+		    // var rndNum = Math.floor(Math.random() * $sibs.length );
+		    // var $next  = $( $sibs[ rndNum ] );
+		
+		    $active.addClass('last-active');
+		
+		    $next.css({opacity: 0.0})
+		        .addClass('active')
+		        .animate({opacity: 1.0}, 1000, function() {
+		            $active.removeClass('active last-active');
+		        });
+		}
+		
+		$(function() {
+		    setInterval( "slideSwitch()", 5000 );
+		});
+	</script>
+	
 	<style>
 	      body {
 	        padding-top: 54px;
@@ -58,7 +90,7 @@
   </head>
 
   <body>
-
+	
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
@@ -77,7 +109,7 @@
               <a class="nav-link" href="missao.html">Sobre Nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">Serviços</a>
+              <a class="nav-link" href="servicos.html">Serviços</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contatos.html">Contato</a>
@@ -89,9 +121,16 @@
 
     <!-- Page Content -->
 	<div class="container">
-	  
+	 
+	 <div class="row">
+  	    <div class="col">&nbsp;</div>
+  	    <div class="w-100">&nbsp;</div>
+  	    <div class="col">&nbsp;</div>
+  	    <div class="col">&nbsp;</div>
+	 </div>
+	  	 
 	<div class="row">
-	  		<div class="img-responsive" ><img class="img-responsive" src="vendor/bootstrap/css/logo.png"  width="340"></div>
+	  		<div><img class="img-fluid" src="vendor/bootstrap/css/logo.png"  width="340"></div>
 			 <div class="w-50">&nbsp;</div><!-- w-75 w-10 w-50 são os espaçamentos -->
 	  </div>
 	  
@@ -100,46 +139,64 @@
         <div class="col-md-12">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-primary">Serviços</strong>
-              <p class="card-text mb-auto">Desenvolvemos sistemas customizados para a auxiliar os controles organizacionais dos clientes, visando sempre a satisfação do cliente final.
-			  </p>
+            	<div class="row">
+			    	<div class="col-4"><font size="8"><i class="fas fa-cogs"></i></font></div> 
+			    	<div class="col-4"><strong class="d-inline-block mb-2 text-primary" style="margin-top: 20px;"><font size="5">&nbsp;Serviços</font></strong></div>
+			  	</div>
+            		<p style="text-align: justify;">    
+            		Desenvolvemos sistemas customizados para a auxiliar os controles organizacionais dos clientes, visando sempre a satisfação do cliente final.
+			  	</p>
             </div>
-            <img src="images/servicos.png">       
+                  
           </div>
         </div>   
       </div>   
       <div class="row mb-2">
-	  <div class="col-md-12">
+		  <div class="col-md-12">
+	          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+	            <div class="card-body d-flex flex-column align-items-start">
+	              <div class="row">
+				    	<div class="col-4"><font size="8"><i class="fas fa-users"></i></font></div> 
+				    	<div class="col-4"><strong class="d-inline-block mb-2 text-primary" style="margin-top: 20px;"><font size="5">&nbsp;Equipe</font></strong></div>
+				  </div>
+				  <p style="text-align: justify;">
+				  Nossos profissionais de mais alto nível possuem um grande diferencial de mercado por dominarem os conhecimentos técnicos aliados às regras de negócio de nossos parceiros. Neste cenário, o mesmo profissional está habilitado a lidar com a análise da regra de negócio, da estrutura necessária para torná-la possível e do desenvolvimento, diminuindo assim as perdas de informações e agilizando o prazo de entrega.
+				  </p>
+	              
+	            </div>
+	             
+	          </div>
+	      </div>     
+      </div>
+	  <div class="row mb-2">
+	  	<div class="col-md-12">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-primary">Equipe</strong>
-              <p class="card-text mb-auto">Nossos profissionais de mais alto nível possuem um grande diferencial de mercado por dominarem os conhecimentos técnicos aliados às regras de negócio de nossos parceiros. Neste cenário, o mesmo profissional está habilitado a lidar com a análise da regra de negócio, da estrutura necessária para torná-la possível e do desenvolvimento, diminuindo assim as perdas de informações e agilizando o prazo de entrega.
+              <div class="row">
+			    	<div class="col-4"><font size="8"><i class="fas fa-laptop" ></i></font></div> 
+			    	<div class="col-4"><strong class="d-inline-block mb-2 text-primary" style="margin-top: 20px;"><font size="5">Tecnologias</font></strong></div>
+			  </div>
+			  <p style="text-align: justify;">
+			  	Adotamos a linguagem de programação mais utilizada no mundo (Java) com sistemas voltados para Web / Mobile, desta forma disponibilizamos pela rede/internet o seu sistema para qualquer dispositivo, independente de sistema operacional utilizado, o único requisito é que ele possua um navegador instalado e acesso à internet (ou rede, caso for um sistema interno).
+				Temos como preferência atuar com softwares livres quanto aos sistemas operacionais de servidores, bancos de dados e servidores web (Linux, MySQL, Tomcat), porém respeitamos a decisão dos clientes e estamos preparados para atender quaisquer outros requisitos.
+				Nos preocupamos muito com a questão de segurança e integridade de informações e para tanto adotamos práticas reconhecidas pelo mercado como por exemplo a adoção de certificados de segurança criptográficos, redundância de backups, entre outros.
 			  </p>
               
             </div>
-            <img src="images/equipe.png"> 
+             
           </div>
         </div>     
-        </div>
-	  
-      <div class="row mb-2">  
-        <div class="col-md-12">
-          <div class="card flex-md-row mb-4 box-shadow h-md-250">
-            <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-primary">Tecnologias</strong>
-              <p class="card-text mb-auto">Adotamos a linguagem de programação mais utilizada no mundo (Java) com sistemas voltados para Web / Mobile, desta forma disponibilizamos pela rede/internet o seu sistema para qualquer dispositivo, independente de sistema operacional utilizado, o único requisito é que ele possua um navegador instalado e acesso à internet (ou rede, caso for um sistema interno).
-				Temos como preferência atuar com softwares livres quanto aos sistemas operacionais de servidores, bancos de dados e servidores web (Linux, MySQL, Tomcat), porém respeitamos a decisão dos clientes e estamos preparados para atender quaisquer outros requisitos.
-				Nos preocupamos muito com a questão de segurança e integridade de informações e para tanto adotamos práticas reconhecidas pelo mercado como por exemplo a adoção de certificados de segurança criptográficos, redundância de backups, entre outros.
-
-			  </p>
-            </div>
-            <img src="images/tecnologia.png">      
-          </div>
-        </div>
       </div>
     </div>
 	<br><br>
-      <div class="footer">
+	<div id="slideshow">
+	    <img src="images/backfundo.jpg" alt="Slideshow Image 1" class="active" />
+	    <img src="images/backfundo1.jpg" alt="Slideshow Image 2" />   
+	    <img src="images/backfundo3.jpg" alt="Slideshow Image 3" />
+	    <img src="images/backfundo1.jpg" alt="Slideshow Image 4" />
+	    <img src="images/backfundo.jpg" alt="Slideshow Image 5" />
+	</div>       
+      <div class="footer">     
 	    <div style="font-size:20px;">
 	    	<a href="https://www.facebook.com/r1tisistemas"><i class="fab fa-facebook"></i></a>
 	    	<a href="https://twitter.com/r1_ti"><i class="fab fa-twitter"></i></a>
@@ -151,7 +208,38 @@
 	<!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
 
+			//  Creating our button in JS for smaller screens
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> <font color="#fff">Menu</font></button>');
+
+			//  Toggle the class on click to show / hide the menu
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+
+			// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+			document.onclick = function(e) {
+				var mobileButton = document.getElementById('menutoggle'),
+					buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+				if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+					changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+				}
+			}
+		</script>
 
   </body>
 

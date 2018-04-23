@@ -4,7 +4,7 @@
   <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1,">
     <meta name="description" content="">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icon/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon/apple-touch-icon-114x114.png" />
@@ -29,11 +29,44 @@
     <title>Desenvolvimento de Sistemas</title>
 
     <!-- Bootstrap core CSS -->
+    
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-
+	
     <!-- Custom styles for this template -->
-    <link href="vendor/bootstrap/css/full1.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/full.css" rel="stylesheet">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script src="js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+	<script type="text/javascript">
+     	function slideSwitch() {
+		    var $active = $('#slideshow IMG.active');
+		
+		    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+		
+		    // use this to pull the images in the order they appear in the markup
+		    var $next =  $active.next().length ? $active.next()
+		        : $('#slideshow IMG:first');
+		
+		    // uncomment the 3 lines below to pull the images in random order
+		
+		    // var $sibs  = $active.siblings();
+		    // var rndNum = Math.floor(Math.random() * $sibs.length );
+		    // var $next  = $( $sibs[ rndNum ] );
+		
+		    $active.addClass('last-active');
+		
+		    $next.css({opacity: 0.0})
+		        .addClass('active')
+		        .animate({opacity: 1.0}, 1000, function() {
+		            $active.removeClass('active last-active');
+		        });
+		}
+		
+		$(function() {
+		    setInterval( "slideSwitch()", 5000 );
+		});
+	</script>
 	<style>
 	      body {
 	        padding-top: 54px;
@@ -55,6 +88,7 @@
 	    text-align: center;
 	}
 	</style>
+	
   </head>
 
   <body>
@@ -89,46 +123,61 @@
 
     <!-- Page Content -->
 	<div class="container">
-	  
-	<div class="row">
-	  		<div class="img-responsive" ><img class="img-responsive" src="vendor/bootstrap/css/logo.png"  width="340"></div>
-			 <div class="w-50">&nbsp;</div><!-- w-75 w-10 w-50 são os espaçamentos -->
+	 
+	 <div class="row">
+  	    <div class="col">&nbsp;</div>
+  	    <div class="w-100">&nbsp;</div>
+  	    <div class="col">&nbsp;</div>
+  	    <div class="col">&nbsp;</div>
+	 </div>
+	  	   
+	  <div class="row">
+	  		<div><img class="img-fluid" src="vendor/bootstrap/css/logo.png"  width="340"></div>
+			 <!-- w-75 w-10 w-50 são os espaçamentos -->
 	  </div>
 	  <div class="row mb-2">
 	  <div class="col-md-12">
-          <div class="card flex-md-row mb-3">
+	  	<div class="card flex-md-row mb-3">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-primary">Institucional</strong>
-              <p >
+              <div class="row">
+			    <div class="col-4"><font size="8"><i class="fas fa-male"></i></font></div> 
+			    <div class="col-4"><strong class="d-inline-block mb-2 text-primary" style="margin-top: 20px;" ><font size="5">Institucional</font></strong></div>
+			 </div>
+              <p style="text-align: justify;">
               A R1TI atua na área de Tecnologia da Informação contando com profissionais há mais de uma década no mercado em conjunto com jovens talentosos, mescla a agilidade e força da juventude com a experiência e sabedoria adquirida ao longo deste período.
 			  Nosso objetivo é buscar a solução ideal de acordo com a cultura e demanda de nossos clientes, nos tornando parte integrante da corporação e elevando a outro nível o conceito de parceria.</style>
 			  </p>
             </div>
-            <img src="images/institucional.png">    
+               
           </div>
         </div>
         </div>
       <div class="row mb-2">
-	  	
-        <div class="col-md-6">
+	  	<div class="col-md-6">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-primary">Missão</strong>
-              <p class="card-text mb-auto">Organizar e agilizar a tomada de decisões estratégicas através de sistemas customizados.
+              <div class="row">
+			    <div class="col-4"><font size="7"><i class="fas fa-edit"></i></font></div>     
+			    <div class="col-4"><strong class="d-inline-block mb-2 text-primary"  style="margin-top: 20px;">&nbsp;<font size="5">Missão</font></strong></div>
+			  </div>
+              <p style="text-align: justify;">
+              Organizar e agilizar a tomada de decisões estratégicas através de sistemas customizados.
 			  </p>
               
             </div>
-            <img src="images/missao.png">
           </div>
         </div>
         <div class="col-md-6">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-2 text-primary">Visão</strong>
-              <p class="card-text mb-auto">Ser reconhecida como um parceiro de qualidade e parte integrante da cultura de nossos clientes.
+              <div class="row">
+			    <div class="col-4"><font size="8"><i class="fas fa-signal"></i></font></div> 
+			    <div class="col-4"><strong class="d-inline-block mb-2 text-primary"  style="margin-top: 20px;">&nbsp;<font size="5">&nbsp;Visão</font></strong></div>
+			  </div>
+              <p style="text-align: justify;">
+              Ser reconhecida como um parceiro de qualidade e parte integrante da cultura de nossos clientes.
 			  </p>
             </div>
-            <img src="images/visao.png">
           </div>
         </div>
       </div>  
@@ -136,17 +185,27 @@
         <div class="col-md-12">
           <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-              <strong class="d-inline-block mb-3 text-primary">Valores</strong>
-              <p class="card-text mb-auto">Atuar de forma ética, transparente e ágil, buscamos desempenhar o papel de agente transformador de uma sociedade mais justa e inclusiva, dando oportunidade a colaboradores de evoluírem sempre, através de um ambiente livre, criativo e colaborativo.
+            	<div class="row">
+			    	<div class="col-4"><font size="8"><i class="fas fa-star"></i></font></div> 
+			    	<div class="col-4"><strong class="d-inline-block mb-3 text-primary"  style="margin-top: 20px;">&nbsp;<font size="5">Valores</font></strong></div>
+			   </div>
+              <p style="text-align: justify;">
+              Atuar de forma ética, transparente e ágil, buscamos desempenhar o papel de agente transformador de uma sociedade mais justa e inclusiva, dando oportunidade a colaboradores de evoluírem sempre, através de um ambiente livre, criativo e colaborativo.
 			  </p>   
-              
+                
             </div>
-            <img src="images/valores.png">   
           </div>
         </div>
       </div>
     </div>
 	<br><br>
+	<div id="slideshow">   
+	    <img src="images/backfundo.jpg" alt="Slideshow Image 1" class="active" />
+	    <img src="images/backfundo1.jpg" alt="Slideshow Image 2" />   
+	    <img src="images/backfundo2.jpg" alt="Slideshow Image 3" />
+	    <img src="images/backfundo3.jpg" alt="Slideshow Image 4" />
+	    <img src="images/backfundo.jpg" alt="Slideshow Image 5" />
+	  </div>
       <div class="footer">
 	    <div style="font-size:20px;">
 	    	<a href="https://www.facebook.com/r1tisistemas"><i class="fab fa-facebook"></i></a>
@@ -156,6 +215,38 @@
 	    <div><p><font color="#000">R. Síria, 86 - Parque São Jorge - São Paulo - SP- 03086-040 - Tel: 11-2592-8810</font></p></div>
 	  </div>
 	</div>
+	<script>
+			//  The function to change the class
+			var changeClass = function (r,className1,className2) {
+				var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+				if( regex.test(r.className) ) {
+					r.className = r.className.replace(regex,' '+className2+' ');
+			    }
+			    else{
+					r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"),' '+className1+' ');
+			    }
+			    return r.className;
+			};	
+
+			//  Creating our button in JS for smaller screens
+			var menuElements = document.getElementById('menu');
+			menuElements.insertAdjacentHTML('afterBegin','<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> <font color="#fff">Menu</font></button>');
+
+			//  Toggle the class on click to show / hide the menu
+			document.getElementById('menutoggle').onclick = function() {
+				changeClass(this, 'navtoogle active', 'navtoogle');
+			}
+
+			// http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+			document.onclick = function(e) {
+				var mobileButton = document.getElementById('menutoggle'),
+					buttonStyle =  mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+				if(buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+					changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+				}
+			}
+	</script>
 	<!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
